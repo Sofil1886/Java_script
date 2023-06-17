@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- Подкючили стили -->
+    <title>Карточный домик</title>
+</head>
+<body>
+    
+        <h1 class = "title" id = 'el1'>Сериал "Карточный домик"</h1>
+        <img src="https://ae04.alicdn.com/kf/Hd1d911703e3d4da5be0241c403099389C/-.jpg" alt="Карточный домик" width="300" height="450">
+
+        <h2>Описание сериала</h2>
+        <button id = "btn"> "Изменить заголовок" </button>
+        <button id = "btn2"> "Изменить список" </button>
+        <p>
+          "Карточный домик" (англ. "House of Cards") - американский телесериал, основанный на одноименном британском мини-сериале.
+          Сериал является политическим триллером, рассказывающим о безжалостной борьбе за власть внутри американского политического устройства.
+          Главные герои - Фрэнк и Клэр Андервуд - используют различные манипуляции и интриги, чтобы достичь своих амбициозных целей.
+        </p>
+        <script defer language = "JavaScript">
+          function showname(name) {
+            alert(`Привет, ${name}!`)
+          }
+
+
+          let p = prompt("Write your name!");
+          showname(p);
+
+          let age = parseInt(prompt("Введите свой возраст:"));
+          let message;
+
+          switch (true) {
+            case age < 18:
+              message = "Вы слишком молоды для просмотра этого сериала.";
+              break;
+            case age >= 18 && age < 30:
+              message = "Рекомендуемый возрастной рейтинг: 18+. Наслаждайтесь сериалом!";
+              break;
+            case age >= 30:
+              message = "Вы можете смело смотреть этот сериал. Приятного просмотра!";
+              break;
+            default:
+              message = "Некорректный возраст. Пожалуйста, введите число.";
+          }
+        
+          alert(message);
+
+
+          let count = 0;
+          let count1 = 0;
+          function clickButton() {
+            let element = document.getElementById('el1');
+            if (count % 2 == 0) element.classList.add('active');
+            else element.classList.remove('active')
+            count++;
+          }
+
+
+          function clickButton2() {
+            let element1 = document.getElementById('ul');
+            if (count1 % 2 == 0) element1.classList.add('activer');
+            else element1.classList.remove('activer')
+            count1++;
+          }
+
+          let btn = document.getElementById('btn');
+          let btn2 = document.getElementById('btn2');
+          btn.addEventListener('click', clickButton)
+          btn2.addEventListener('click', clickButton2)
+        </script>
+
+        
+        <h2>Основные персонажи</h2>
+        <ul id = "ul">
+          <li id = "ul">Фрэнк Андервуд - безжалостный политик, играющий по своим правилам</li>
+          <li>Клэр Андервуд - супруга Фрэнка и стратегический гений</li>
+          <li>Даг Стэмпер - верный помощник Фрэнка и мастер по проведению грязных сделок</li>
+          <li>Зои Барнс - журналистка, которая расследует действия Фрэнка и Клэр</li>
+        </ul>
+      
+        <h2>Ссылки</h2>
+        <p>Дополнительную информацию о сериале "Карточный домик" вы можете найти на следующих сайтах:</p>
+        <ul>
+          <li><a href="https://www.netflix.com/title/70178217">Официальная страница на Netflix</a></li>
+          <li><a href="https://www.imdb.com/title/tt1856010/">Страница на IMDb</a></li>
+          <li><a href="https://ru.wikipedia.org/wiki/Карточный_домик_(телесериал)">Страница на Википедии</a></li>
+        </ul>
+    
+</body>
+</html>
